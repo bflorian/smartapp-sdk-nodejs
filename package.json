@@ -1,6 +1,6 @@
 {
   "name": "@smartthings/smartapp",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "NodeJS SDK for SmartApps",
   "displayName": "SmartThings SmartApp SDK for NodeJS",
   "author": "SmartThings",
@@ -14,6 +14,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "xo",
+    "testonly": "mocha test/**/*.js",
     "test": "xo && nyc mocha test/**/*.js",
     "start": "node ./smart-app.js",
     "debug": "node --inspect ./lib/smart-app.js"
@@ -52,7 +53,11 @@
     "rules": {
       "no-useless-constructor": 1,
       "promise/prefer-await-to-then": 1,
-      "prefer-object-spread": 1
+      "prefer-object-spread": 1,
+      "camelcase": [
+        "error",
+        { "properties": "never" }
+      ]
     }
   }
 }

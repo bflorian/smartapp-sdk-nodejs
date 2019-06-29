@@ -9,6 +9,9 @@ yarn-error.log*
 .idea
 *.iml
 
+# VS Code
+.vscode
+
 # Runtime data
 pids
 *.pid
